@@ -9,7 +9,7 @@ banner:
     label: Learn more
     link: products/
 features:
-  enable: true
+  enable: false
   title: Experience those multi-player games with friends
   image: images/watch-2.png
   left_side:
