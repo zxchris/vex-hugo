@@ -88,6 +88,11 @@ name = "Privacy Policy"
 url = "privacy-policy/"
 weight = 4
 
+[[menu.product]]
+name = "Blog"
+url = "blog/"
+weight = 1
+
 
 ########################### Default parameters ##########################
 [params]
