@@ -20,7 +20,7 @@ sizes:
 - large
 button_link: "#"
 features:
-  enable: false
+  enable: true
   left_side:
   - title: Something
     icon: ''
