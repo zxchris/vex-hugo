@@ -51,7 +51,8 @@ features:
 contents:
   enable: true
   title: What's in the box
-  image: images/products/thec64mini-spec.png
+  #image: images/products/thec64mini-spec.png
+  image: images/products/thec64mini_box.png
   image_height: 300px
   content: |
     * THEC64 Mini
