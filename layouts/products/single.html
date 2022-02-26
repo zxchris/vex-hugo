@@ -35,16 +35,94 @@
           data-item-custom2-options="{{range $index, $element:= .Params.sizes}}{{if eq $index 0}}{{. | title}}{{else}}|{{. | title}}{{end}}{{end}}"
           {{end}}>{{i18n "add_to_cart"}}
         </button>
+        {{/*
         {{ else }}
         {{ with .Params.button_link}}
         <a class="btn btn-main mb-5" href="{{ . | absURL }}">{{i18n "add_to_cart"}}</a>
         {{ end }}
+        */}}
         {{ end }}
 
         <div class="content">{{.Content}}</div>
+  
+
       </div>
     </div>
   </div>
 </section>
+
+<!-- Features -->
+{{- if .Params.features.enable }}
+{{- with .Params.features }}
+<section class="section bg-grey mb-10" id="features">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="heading">
+          <h2>{{ .title | markdownify }}</h2>
+        </div>
+      </div>
+      <div class="col-md-4">
+        {{ range .left_side }}
+        <div class="mb-40 text-center text-md-left">
+          <i class="d-inlin-block h2 mb-10 {{ .icon }}"></i>
+          <h4 class="font-weight-bold mb-2">{{ .title | markdownify }}</h4>
+          <p>{{ .content | markdownify }}</p>
+        </div>
+        {{ end }}
+      </div>
+      <div class="col-md-4 text-center align-self-center mb-4 mb-md-0">
+        <img class="img-fluid" src="{{ .image | absURL }}" alt="">
+      </div>
+      <div class="col-md-4">
+          {{ range .right_side }}
+        <div class="mb-40 text-center text-md-left">
+          <i class="d-inlin-block h2 mb-10 {{ .icon }}"></i>
+          <h4 class="font-weight-bold mb-2">{{ .title | markdownify }}</h4>
+          <p>{{ .content | markdownify }}</p>
+        </div>
+        {{ end }}
+      </div>
+    </div>
+  </div><!-- .container close -->
+</section>
+{{- end }}
+{{- end }}
+
+
+{{ if .Params.contents.enable }}
+{{ with .Params.contents }}
+<section class="bg-orange section mb-10">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 text-center mb-5 mb-lg-0">
+          <img class="img-fluid" src="{{ .image | absURL }}" alt="" style="max-height: {{ .image_height }};">
+      </div>
+      <div class="col-md-6 align-self-center text-center text-md-left">
+        <div class="content">
+          <h2 class="subheading text-white font-weight-bold mb-10">{{ .title | markdownify }}</h2>
+          <div class="text-white bullet-disc">{{ .content | markdownify }}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}
+{{ end }}
+
+{{- if .Params.games.enable }}
+{{- with .Params.games }}
+<section class="call-to-action section bg-opacity" style="background-image: url('{{ .bg_image | absURL }}');">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-8 text-center mx-auto">
+        <h2 class="subheading text-white">{{ .title | markdownify }}</h2>
+        <p class="text-white">{{ .content | markdownify }}</p>
+      </div>
+    </div>
+  </div>
+</section><!-- #call-to-action close -->
+{{- end }}
+{{- end }}
 
 {{ end }}

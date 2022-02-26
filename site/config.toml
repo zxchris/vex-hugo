@@ -90,7 +90,7 @@ logo_width = "100px"
 description = "This is meta description"
 author = "Themefisher"
 # currency
-currency = "$"
+currency = "£"
 # contact form action
 contact_form_action = "#" # contact form works with https://formspree.io
 
