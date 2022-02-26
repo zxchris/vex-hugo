@@ -17,9 +17,6 @@ fields:
 - type: text
   name: price
   label: price
-- type: text
-  name: discount_price
-  label: discount_price
 - type: list
   name: colors
   label: colors
@@ -29,3 +26,77 @@ fields:
 - type: text
   name: button_link
   label: button_link
+- type: field_group
+  name: features
+  label: features
+  fields:
+  - type: boolean
+    name: enable
+    label: enable
+  - type: text
+    name: title
+    label: title
+  - type: file
+    name: image
+    label: image
+  - type: field_group_list
+    name: left_side
+    label: left_side
+    fields:
+    - type: text
+      name: title
+      label: title
+    - type: text
+      name: icon
+      label: icon
+    - type: text
+      name: content
+      label: content
+  - type: field_group_list
+    name: right_side
+    label: right_side
+    fields:
+    - type: text
+      name: title
+      label: title
+    - type: text
+      name: icon
+      label: icon
+    - type: text
+      name: content
+      label: content
+- type: field_group
+  name: contents
+  label: contents
+  fields:
+  - type: boolean
+    name: enable
+    label: enable
+  - type: text
+    name: title
+    label: title
+  - type: file
+    name: image
+    label: image
+  - type: text
+    name: image_height
+    label: image_height
+  - type: textarea
+    name: content
+    label: content
+- type: field_group
+  name: games
+  label: games
+  fields:
+  - type: boolean
+    name: enable
+    label: enable
+  - type: text
+    name: title
+    label: title
+  - type: file
+    name: bg_image
+    label: bg_image
+  - type: textarea
+    name: content
+    label: content
