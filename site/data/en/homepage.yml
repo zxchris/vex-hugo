@@ -1,9 +1,10 @@
 ---
-banner:
+mainbanner:
   enable: true
   title: Now other classic consoles are just toys!
-  content: Our most advanced creation yet. Available 25th March 2022.
-  image: images/thea500-3d.png
+  content: Amiga gaming has never been so much fun.
+  image: images/thea500-mini-logo-white-bg.png
+  bg_image: images/thea500-3d.png
   button:
     enable: true
     label: Learn more

@@ -1,6 +1,6 @@
 ################################### Default Configuration ############################
 baseurl = "/"
-title = "Vex | hugo landing page template"
+title = "Retro Games official website"
 theme = "vex-hugo"
 # post excert
 summarylength = "20"
@@ -46,35 +46,19 @@ link = "https://cdn.snipcart.com/themes/v3.0.27/default/snipcart.js"
 
 # homepage section menu
 [[menu.main]]
-name = "Home"
-url = "/"
+name = "Products"
+url = "products/"
 weight = 1
 
 [[menu.main]]
-name = "Products"
-url = "products/"
+name = "News"
+url = "news/"
 weight = 2
-
-[[menu.main]]
-name = "Blog"
-url = "blog/"
-weight = 3
-
-[[menu.main]]
-name = "Review"
-pre = "#"
-url = "testimonial"
-weight = 4
-
-[[menu.main]]
-name = "Contact"
-url = "contact/"
-weight = 5
 
 # footer menu
 [[menu.footer]]
-name = "Blog"
-url = "blog/"
+name = "About"
+url = "about/"
 weight = 1
 
 [[menu.footer]]
@@ -83,8 +67,8 @@ url = "contact/"
 weight = 2
 
 [[menu.footer]]
-name = "Terms & Conditions"
-url = "terms-conditions/"
+name = "Legal Notices"
+url = "legal/"
 weight = 3
 
 [[menu.footer]]
@@ -93,8 +77,8 @@ url = "privacy-policy/"
 weight = 4
 
 [[menu.product]]
-name = "Blog"
-url = "blog/"
+name = "News"
+url = "news/"
 weight = 1
 
 
@@ -117,7 +101,7 @@ preloader = "" # use .png , .svg or .gif format
 
 # Snipcart
 [params.snipcart]
-enable = true
+enable = false
 # snipcart public api key
 snipcart_api = "ZDgxY2ZiM2EtMWRmMi00M2ZkLWI1MDAtNzA2MDc0Y2Q1MzJlNjM3MTAzNDIwOTQ1NDA4NjM4"
 
@@ -139,11 +123,11 @@ copyright = "Copyright © 2022 Retro Games Ltd, company registered in England an
 
 
 ################################### French language #####################################
-[Languages.fr]
-languageName = "Fr"
-languageCode = "fr-fr"
-contentDir = "content/french"
-weight = 2
-# copyright
-#copyright = "Designed By [Themefisher](https://themefisher.com/) & Developed By [Gethugothemes](https://gethugothemes.com/)"
-copyright = "Copyright © 2022 Retro Games Ltd, company registered in England and Wales, 09745704."
+#[Languages.fr]
+#languageName = "Fr"
+#languageCode = "fr-fr"
+#contentDir = "content/french"
+#weight = 2
+## copyright
+##copyright = "Designed By [Themefisher](https://themefisher.com/) & Developed By [Gethugothemes](https://gethugothemes.com/)"
+#copyright = "Copyright © 2022 Retro Games Ltd, company registered in England and Wales, 09745704."

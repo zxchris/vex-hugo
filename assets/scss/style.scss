@@ -6,6 +6,7 @@ $secondary-font: Lato, Helvetica, Arial, sans-serif;
 $heading-font: muli, "Helvetica Neue", Helvetica, Arial, sans-serif;
 //$primary-color: #f9a743;
 $primary-color: #2D7BD6;
+$grey-color: #f0f0f0;
 $icon-font: 'themefisher-font' !important;
 
 /*--
@@ -100,6 +101,10 @@ a {
   background: $primary-color;
 }
 
+.bg-grey {
+  background: $grey-color;
+}
+
 .bg-opacity {
   position: relative;
 
@@ -111,6 +116,20 @@ a {
     right: 0;
     bottom: 0;
     background: rgba(0, 0, 0, 0.7);
+  }
+}
+
+.bg-opacity-light {
+  position: relative;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.5);
   }
 }
 
@@ -151,7 +170,7 @@ a:active {
 }
 
 .mb-10 {
-  margin-bottom: 10px;
+    margin-bottom: 10px;
 }
 
 .mb-40 {
@@ -474,6 +493,15 @@ footer {
   }
 }
 
+// banner background
+.banner-background {
+  //background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  //background-size: 90%;
+  //background-position: center top;
+}
+
 // product single
 p.price {
   font-size: 30px;
@@ -647,4 +675,8 @@ textarea.form-control {
   &:hover{
     color: $primary-color;
   }
+}
+
+.ds {
+    text-shadow: #fff 1px 1px 0px;
 }
