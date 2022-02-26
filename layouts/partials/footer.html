@@ -20,10 +20,12 @@
 
 
 <!-- Snipcart public key -->
+{{ if site.Params.snipcart.enable}}
 {{ with site.Params.snipcart }}
 {{ if .enable }}
 {{ with .snipcart_api }}
 <div hidden id="snipcart" data-api-key="{{.}}"></div>
+{{ end }}
 {{ end }}
 {{ end }}
 {{ end }}
