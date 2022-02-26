@@ -1,0 +1,102 @@
+---
+label: Product template
+hide_body: false
+fields:
+- type: text
+  name: title
+  label: title
+- type: datetime
+  name: date
+  label: date
+- type: image_gallery
+  name: images
+  label: images
+- type: text
+  name: description
+  label: description
+- type: text
+  name: price
+  label: price
+- type: list
+  name: colors
+  label: colors
+- type: list
+  name: sizes
+  label: sizes
+- type: text
+  name: button_link
+  label: button_link
+- type: field_group
+  name: features
+  label: features
+  fields:
+  - type: boolean
+    name: enable
+    label: enable
+  - type: text
+    name: title
+    label: title
+  - type: file
+    name: image
+    label: image
+  - type: field_group_list
+    name: left_side
+    label: left_side
+    fields:
+    - type: text
+      name: title
+      label: title
+    - type: text
+      name: icon
+      label: icon
+    - type: text
+      name: content
+      label: content
+  - type: field_group_list
+    name: right_side
+    label: right_side
+    fields:
+    - type: text
+      name: title
+      label: title
+    - type: text
+      name: icon
+      label: icon
+    - type: text
+      name: content
+      label: content
+- type: field_group
+  name: contents
+  label: contents
+  fields:
+  - type: boolean
+    name: enable
+    label: enable
+  - type: text
+    name: title
+    label: title
+  - type: file
+    name: image
+    label: image
+  - type: text
+    name: image_height
+    label: image_height
+  - type: textarea
+    name: content
+    label: content
+- type: field_group
+  name: games
+  label: games
+  fields:
+  - type: boolean
+    name: enable
+    label: enable
+  - type: text
+    name: title
+    label: title
+  - type: file
+    name: bg_image
+    label: bg_image
+  - type: textarea
+    name: content
+    label: content
