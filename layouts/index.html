@@ -1,10 +1,11 @@
 {{ define "main" }}
 
+  {{ $data := index .Site.Data .Site.Language.Lang }}
+  {{ .Scratch.Set "banner"  $data.homepage.mainbanner }}
   {{- partial "mainbanner.html" . }}
 
   <!-- {{- partial "banner.html" . }} -->
-
-  {{- partial "features.html" . }}
+  <!-- {{- partial "features.html" . }} -->
 
   {{- partial "promo.html" . }}
 
@@ -12,8 +13,8 @@
 
   {{- partial "products.html" . }}
 
-  {{- partial "subscription.html" . }}
+  <!-- {{- partial "subscription.html" . }} -->
 
-  {{- partial "testimonials.html" . }}
+  <!-- {{- partial "testimonials.html" . }} -->
 
 {{ end }}

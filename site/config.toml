@@ -98,6 +98,8 @@ currency = "£"
 # contact form action
 contact_form_action = "#" # contact form works with https://formspree.io
 
+link_icon = "fa-solid fa-arrow-up-right-from-square"
+
 # Preloader
 [params.preloader]
 enable = true

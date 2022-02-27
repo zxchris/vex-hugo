@@ -106,6 +106,29 @@ reviews:
       souls like mine. I am so happy, my dear friend, so absorbed in the exquisite
       sense of mere tranquil existence, that I neglect my talents.
 
+essentials:
+  enable: true
+  title: THEC64 Mini essentials
+  items:
+  - image: images/showcase/showcase-4.png
+    title: THEJOYSTICK microswitch joystick
+    content: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate,
+      sed, assumenda. Tenetur sed esse, voluptas voluptate est veniam numquam, quis
+      magni. Architecto minus suscipit quas, quo harum deserunt consequatur cumque!
+    button:
+      enable: true
+      label: Learn more
+      link: "#/"
+  - image: images/showcase/showcase-3.png
+    title: THEGAMEPAD
+    content: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate,
+      sed, assumenda. Tenetur sed esse, voluptas voluptate est veniam numquam, quis
+      magni. Architecto minus suscipit quas, quo harum deserunt consequatur cumque!
+    button:
+      enable: true
+      label: Learn more
+      link: "#/"
+
 ---
 
 Picture this: It’s 1982 and a new home computer graces the scene. Out goes the silent black and white experience and in with 64KB of RAM, colour graphics, and synthesizer sound.

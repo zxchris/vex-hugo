@@ -1,7 +1,12 @@
 {{ $data := index .Site.Data .Site.Language.Lang }}
 
-{{- if $data.homepage.mainbanner.enable }}
-{{- with $data.homepage.mainbanner }}
+{{/* - if $data.homepage.mainbanner.enable */}}
+{{/* - with $data.homepage.mainbanner */}}
+
+{{ $banner := .Scratch.Get "banner" }}
+
+{{- if $banner.enable }}
+{{- with $banner }}
 <!-- hero area -->
 <section class="banner-background section bg-opacity-light mb-10" style="background-image: url('{{ .bg_image | absURL }}');">
 	<div class="container">

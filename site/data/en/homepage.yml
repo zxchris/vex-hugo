@@ -8,7 +8,18 @@ mainbanner:
   button:
     enable: true
     label: Learn more
+    link: products/thea500-mini
+showcase1:
+  enable: true
+  title: The World’s Best-Selling Home Computer – Re-reborn
+  content: The C64 is back, this time full-sized with a working keyboard for the dedicated retro home-computer fan.
+  image: images/products/THEC64-logo-with-white-lozenge-RGB.png
+  bg_image: images/products/thec64_angled2.png
+  button:
+    enable: true
+    label: Learn more
     link: products/
+
 features:
   enable: true
   title: Experience those multi-player games with friends
