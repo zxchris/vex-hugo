@@ -15,6 +15,11 @@
       </div>
       <div class="col-lg-6 col-md-7 offset-lg-1">
         <h1 class="mb-4">{{ .Title }}</h1>
+        {{ if .Params.logo }}
+        <div>
+            <img class="img-fluid" src="{{ .Params.logo | absURL }}" alt="{{ .Title }} logo">
+        </div>
+        {{ end }}
         {{ with .Params.colors }}<p><strong>Colors: </strong>{{ delimit . ", " | title}}</p>{{ end }}
         {{ with .Params.sizes }}<p><strong>Sizes: </strong>{{ delimit . ", " | title}}</p>{{ end }}
         <p class="price py-4">{{if .Params.discount_price}}{{site.Params.currency}}{{.Params.discount_price}}{{else}}{{site.Params.currency}}{{.Params.price}}{{end}}
@@ -62,22 +67,24 @@
           <h2>{{ .title | markdownify }}</h2>
         </div>
       </div>
-      <div class="col-md-4">
+      <!-- <div class={{if .image }}"col-md"{{else}}"col-md-5"{{end}}> -->
+      <div class="col-md">
         {{ range .left_side }}
         <div class="mb-40 text-center text-md-left">
-          <i class="d-inlin-block h2 mb-10 {{ .icon }}"></i>
+          <i class="d-inlin-block h2 mb-10 grey-icon fa {{ .icon }}"></i>
           <h4 class="font-weight-bold mb-2">{{ .title | markdownify }}</h4>
           <p>{{ .content | markdownify }}</p>
         </div>
         {{ end }}
       </div>
-      <div class="col-md-4 text-center align-self-center mb-4 mb-md-0">
-        <img class="img-fluid" src="{{ .image | absURL }}" alt="">
+      <div class={{if .image }}"col-md-5 text-center align-self-center mb-4 mb-md-0"{{else}}"col-md-2"{{end}}>
+          <img class="img-fluid" src="{{ .image | absURL }}" alt="">
       </div>
-      <div class="col-md-4">
-          {{ range .right_side }}
+      <!-- <div class={{if .image }}"col-md"{{else}}"col-md-5"{{end}}>  -->
+      <div class="col-md">
+        {{ range .right_side }}
         <div class="mb-40 text-center text-md-left">
-          <i class="d-inlin-block h2 mb-10 {{ .icon }}"></i>
+          <i class="d-inlin-block h2 mb-10 grey-icon fa {{ .icon }}"></i>
           <h4 class="font-weight-bold mb-2">{{ .title | markdownify }}</h4>
           <p>{{ .content | markdownify }}</p>
         </div>
@@ -118,11 +125,47 @@
       <div class="col-lg-8 col-md-8 text-center mx-auto">
         <h2 class="subheading text-white">{{ .title | markdownify }}</h2>
         <p class="text-white">{{ .content | markdownify }}</p>
+		{{ if .button.enable }}
+		{{ with .button }}
+		<a href="{{.link|absLangURL}}" class="btn btn-main">{{.label}}</a>
+		{{ end }}
+		{{ end }}
       </div>
     </div>
   </div>
-</section><!-- #call-to-action close -->
+</section>
 {{- end }}
 {{- end }}
+
+<!-- Review -->
+{{ if .Params.reviews.enable }}
+{{ with .Params.reviews }}
+<section class="testimonials section" id="testimonial">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12">
+        <div class="heading">
+          <h2>{{ .title | markdownify }}</h2>
+        </div>
+      </div>
+      {{ range .item }}
+      <div class="col-lg-4 col-sm-6 mb-5 mb-lg-0 text-center">
+        <div class="testimonial-block">
+          <p>{{ .content | markdownify }}</p>
+          <div class="author-details">
+            {{ if .image }}
+            <img src="{{ .image | absURL }}" alt="{{ .name }}">
+            {{ end }}
+            <h4>{{ .name }}</h4>
+            <span>{{ .designation }}</span>
+          </div>
+        </div>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}
+{{ end }}
 
 {{ end }}
