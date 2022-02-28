@@ -129,6 +129,17 @@ essentials:
       label: Learn more
       link: "#/"
 
+menu:
+  - name: Support
+    url: support/
+    weight: 1
+  - name: Manuals
+    url: support/manuals
+    weight: 2
+  - name: Games
+    url: games/
+    weight: 3
+
 ---
 
 Picture this: It’s 1982 and a new home computer graces the scene. Out goes the silent black and white experience and in with 64KB of RAM, colour graphics, and synthesizer sound.

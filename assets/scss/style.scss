@@ -283,7 +283,7 @@ a:active {
   padding: 10px 20px !important;
 }
 
-.navbar-light .navbar-nav .nav-link {
+.navbar-dark .navbar-nav .nav-link {
   // color: #444;
   color: #e0e0e0;
   &:hover {
@@ -291,12 +291,13 @@ a:active {
   }
 }
 
-.navbar-dark .navbar-nav .nav-link {
+.navbar-light .navbar-nav .nav-link {
   // color: #444;
   color: #101010;
   &:hover {
     color: #2020a0;
   }
+  display: inline;
 }
 
 .navbar-background {
