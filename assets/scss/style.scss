@@ -164,6 +164,9 @@ a:active {
 
 .section {
   padding: 90px 0;
+  @include mobile {
+    padding: 45px 0;
+  }
 }
 
 .font-size-60 {
@@ -207,6 +210,9 @@ a:active {
   text-align: center;
   color: #777777;
   padding-bottom: 60px;
+  @include mobile {
+    padding-bottom: 30px;
+  }
 
   h2 {
     color: #3c3c3c;
@@ -284,15 +290,14 @@ a:active {
 }
 
 .navbar-dark .navbar-nav .nav-link {
-  // color: #444;
   color: #e0e0e0;
   &:hover {
     color: #ffffff;
   }
+  display: inline;
 }
 
 .navbar-light .navbar-nav .nav-link {
-  // color: #444;
   color: #101010;
   &:hover {
     color: #2020a0;
@@ -631,6 +636,10 @@ textarea.form-control {
         max-width: 100%;
       }
     }
+  }
+
+  img {
+      padding: 1px;
   }
 }
 

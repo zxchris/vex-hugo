@@ -10,7 +10,7 @@
         <div class="product-image-slider">
           {{ range .Params.images }}
           <div data-image="{{ . | absURL }}">
-            <img class="img-fluid w-100" src="{{ . | absURL }}" alt="product-image">
+              <img class="img-fluid w-100" src="{{ . | absURL }}" alt="product-image"> <!-- style="padding: 1px;"> -->
           </div>
           {{ end }}
         </div>
@@ -19,7 +19,7 @@
         <h1 class="mb-4">{{ .Title }}</h1>
         {{ if .Params.logo }}
         <div>
-            <img class="img-fluid" src="{{ .Params.logo | absURL }}" alt="{{ .Title }} logo">
+            <img class="img-fluid" src="{{ .Params.logo | absURL }}" alt="{{ .Title }} logo" {{ with .Params.logo_width}}width="{{.}}"{{end}}>
         </div>
         {{ end }}
         {{ with .Params.colors }}<p><strong>Colors: </strong>{{ delimit . ", " | title}}</p>{{ end }}
@@ -123,7 +123,7 @@
 <section class="call-to-action section bg-opacity" style="background-image: url('{{ .bg_image | absURL }}');">
   <div class="container">
     <div class="row">
-      <div class="col-lg-8 col-md-8 text-center mx-auto">
+      <div class="col-lg-10 col-md-10 text-center mx-auto">
         <h2 class="subheading text-white">{{ .title | markdownify }}</h2>
         <p class="text-white">{{ .content | markdownify }}</p>
 		{{ if .button.enable }}

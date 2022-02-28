@@ -1,6 +1,7 @@
 ################################### Default Configuration ############################
 baseurl = "/"
-title = "Retro Games official website"
+title = "Retro Games"
+#theme = "rgl-ap"
 theme = "vex-hugo"
 # post excert
 summarylength = "20"
@@ -89,15 +90,16 @@ weight = 1
 ########################### Default parameters ##########################
 [params]
 logo = "images/RetroGames-2021-logo-928.png"
-logo_width = "100px"
+logo_width = "80px"
 # Meta data
-description = "This is meta description"
-author = "Themefisher"
+description = "Experience beautiful retro gaming perfected, with THEA500, THEC64, THEVIC20, THEGAMEPAD, THEMOUSE and THEJOYSTICK."
+author = "Retro Games Ltd"
 # currency
 currency = "£"
 # contact form action
 contact_form_action = "#" # contact form works with https://formspree.io
 
+# Icon used on product page hover links
 link_icon = "fa-solid fa-arrow-up-right-from-square"
 
 # Preloader

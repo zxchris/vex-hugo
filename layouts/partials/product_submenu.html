@@ -1,13 +1,15 @@
 <header class="navbar-background-secondary">
   <div class="container">
-    <nav class="navbar navbar-expand-md navbar-light justify-content-center">
-        <ul class="navbar-nav nav">
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <span class="collapse navbar-collapse text-center" id="snav">
+        <ul class="nav navbar-nav mx-auto">
           {{ range .Params.menu }}
           <li class="nav-item">
             <a class="nav-link" href="{{if .pre}}{{site.BaseURL | relLangURL}}{{.pre}}{{ .url }}{{else}}{{.url | absLangURL}}{{end}}">{{ .name }}</a>
           </li>
           {{ end }}
         </ul>
+      </span>
     </nav>
   </div>
 </header>
