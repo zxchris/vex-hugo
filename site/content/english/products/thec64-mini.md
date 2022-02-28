@@ -51,7 +51,7 @@ contents:
     * HDMI cable
     * USB power lead (power adapter not included)
 games:
-  enable: false
+  enable: true
   title: 64 Fabulous Games Included
   bg_image: images/products/thec64mini_games_collage.png
   content: Alleykat; Anarchy; Attack of the Mutant Camels; Avenger; Battle Valley;
