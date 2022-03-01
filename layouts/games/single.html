@@ -1,0 +1,75 @@
+{{ define "main" }}
+
+<section class="section mb-10" id="features">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3 mb-4 mb-md-0">
+        <img class="img-fluid w-100 mb-4" src="cover.png" alt="product-image">
+        <!-- product image slider -->
+        <h3 class="mb-4 text-center">Controls</h3>
+        <table class="table">
+          {{ if .Params.joystick }}
+            <thead class="thead-light">
+                <tr>
+                    <th scope="col">Joystick</th>
+                    <th scope="col">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+              {{ range .Params.joystick }}
+              {{ range $joy, $act := . }}
+                <tr>
+                  <th scope="row">
+                    {{ if eq $joy "button-a" }}●○○○{{end}}
+                    {{ if eq $joy "button-b" }}○●○○{{end}}
+                    {{ if eq $joy "button-c" }}○○●○{{end}}
+                    {{ if eq $joy "tr"       }}◸&nbsp;&nbsp;&nbsp;◥{{end}}
+                    {{ if eq $joy "tl"       }}◤&nbsp;&nbsp;&nbsp;◹{{end}}
+                    {{ if eq $joy "up"       }}UP{{end}}
+                    {{ if eq $joy "down"     }}DOWN{{end}}
+                    {{ if eq $joy "left"     }}LEFT{{end}}
+                    {{ if eq $joy "right"    }}RIGHT{{end}}
+                    {{ if eq $joy "lfire"    }}⬤&nbsp;&nbsp;&nbsp;◯{{end}}
+                    {{ if eq $joy "rfire"    }}◯&nbsp;&nbsp;&nbsp;⬤{{end}}
+                  </th>
+                  <td>{{ $act }}</td>
+                </tr>
+              {{ end }}
+              {{ end }}
+            </tbody>
+          {{ end }}
+        </table>
+      </div>
+
+      <div class="col-md-9">
+      <h1 class="mb-4">{{ .Params.title }}</h1>
+    
+<!--
+      {{ with .Params.meta }}
+        <div class="row">
+            <div class="col-md-6">
+                <p>Created by {{ .author }}</p>
+              <p>Created by</p>
+              <p>Created by</p>
+              <p>Created by</p>
+          </div>
+          <div class="col-md-6">
+              <p class="text-right">Created by</p>
+          </div>
+        </div>
+        {{ end }}
+
+        <h2 class="mb-4">Overview</h2>
+-->
+        <p>{{ .Params.game_desc.en.content }}</p>
+
+        <hr/>
+
+        <div class="content-game">{{.Content}}</div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+{{ end }}

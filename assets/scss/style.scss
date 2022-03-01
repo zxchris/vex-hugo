@@ -646,7 +646,7 @@ textarea.form-control {
 
 
 /* content style */
-.content {
+.content, .content-game {
   * {
     margin-bottom: 20px;
   }
@@ -711,6 +711,13 @@ textarea.form-control {
   pre {
     padding: 10px 20px;
     background: #dadada;
+  }
+}
+
+.content-game {
+  img {
+    width: 65%;
+    margin-left: 12%;
   }
 }
 

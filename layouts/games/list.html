@@ -1,0 +1,40 @@
+{{ define "main" }}
+
+<section class="section gallery">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-center mb-5">
+          <h1 class="mb-4">{{ .Title }}</h1>
+      </div>
+      {{ $data := newScratch }}
+      {{ $data.Set "filter" .Params.index }}
+
+      {{ range where $.Site.RegularPages "Section" "games" }}
+      {{ if in .Params.indicies ($data.Get "filter") }}
+      <!-- Filter: {{ $data.Get "filter" }} -->
+      <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+        <div class="block">
+<!--
+          <div class="gallery-overlay">
+              <a href="{{ .Permalink }}" class="gallery-popup">
+              {{ if site.Params.link_icon}}
+              <i class="{{site.Params.link_icon}}"></i>
+              {{ end }}
+            </a>
+          </div>
+-->
+          <a href="{{ .Permalink }}">
+          <img class="img-fluid" src="{{ .Permalink }}/cover.png" alt="{{.Title}}">
+              </a>
+        </div>
+        <div class="product-info">
+          <h3 class="mb-2"><a href="{{.Permalink}}" class="link-title">{{.Title}}</a></h3>
+        </div>
+      </div>
+      {{ end }}
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+{{ end }}
